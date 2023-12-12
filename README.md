@@ -37,10 +37,12 @@ Example `config.json`:
 
 ```json
 {
-    "www.example1.com": "www.newdomain1.com",
-    "www.example2.com": "www.newdomain2.com"
+    "api.example1.com": "api.newdomain.com",
+    "ing.example2.com": "img.newdomain.com"
 }
 ```
+
+example file: [config.json](config.json)
 
 ### Running the Service
 
