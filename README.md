@@ -1,6 +1,7 @@
 # DomainForwarder
 
-This Go-based reverse proxy service maps and forwards incoming HTTP requests from specified domains to target domains, while maintaining the original request attributes such as query strings, paths, headers, and bodies.
+This Go-based reverse proxy service maps and forwards incoming HTTP requests from specified domains to target domains,
+while maintaining the original request attributes such as query strings, paths, headers, and bodies.
 
 ## Features
 
@@ -19,17 +20,56 @@ This Go-based reverse proxy service maps and forwards incoming HTTP requests fro
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/reverse-proxy-service.git
+   git clone https://github.com/golfz/DomainForwarder.git
+   ```
+
+2. Navigate to the project directory:
+
+   ```bash
+   cd DomainForwarder
+   ```
 
 ### Configuration
 
-The configuration file is a JSON file that contains the mappings of domains to other domains. The file is structured as follows:
+Create a JSON file for domain mappings. The format should map source domains to target domains.
 
 Example `config.json`:
 
 ```json
 {
-  "api.example.com": "api.newdomain.com",
-  "img.example.com": "img.newdomain.com"
+    "www.example1.com": "www.newdomain1.com",
+    "www.example2.com": "www.newdomain2.com"
 }
 ```
+
+### Running the Service
+
+Run the service using the Go command:
+
+```bash
+go run main.go
+```
+
+The service will start and listen on port 8080 by default.
+
+### Usage
+After starting the service, it will intercept incoming HTTP requests and forward them based on the domain mappings
+defined in the `config.json` file.
+
+## Building for Docker
+
+```shell
+env GOOS=linux GOARCH=amd64 go build -o DomainForwarder
+```
+
+### Contributing
+Contributions are welcome! Please feel free to open issues or submit pull requests.
+
+### License
+This project is licensed under the MIT License.
+
+### Contact
+- [@golfz](https://twitter.com/golfz)
+
+### Project Link: 
+https://github.com/golfz/DomainForwarder
