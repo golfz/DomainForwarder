@@ -44,6 +44,15 @@ Example `config.json`:
 
 example file: [config.json](config.json)
 
+If you use in Docker, example `config.json`
+
+```json
+{
+    "api.example1.com": "api_service",
+    "ing.example2.com": "img_service"
+}
+```
+
 ### Running the Service
 
 Run the service using the Go command:

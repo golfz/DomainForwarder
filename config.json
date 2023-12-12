@@ -1,4 +1,4 @@
 {
-    "api.example1.com": "api.newdomain.com",
-    "ing.example2.com": "img.newdomain.com"
+    "api.example.com": "api.newdomain.com",
+    "img.example.com": "img.newdomain.com"
 }
