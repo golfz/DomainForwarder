@@ -1,1 +1,7 @@
-package DomainForwarder
+package main
+
+import "fmt"
+
+func main() {
+	fmt.Println("Hello")
+}
